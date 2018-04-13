@@ -168,7 +168,7 @@ class SeafDir(_SeafDirentBase):
             'file': (filename, fileobj),
             'parent_dir': self.path,
         }
-        
+        # print(files)
         self.client.post(upload_url, files=files)
         return self.repo.get_file(posixpath.join(self.path, filename))
 
